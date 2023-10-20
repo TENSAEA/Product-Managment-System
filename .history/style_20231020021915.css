@@ -52,7 +52,6 @@ html, body {
   font-size: 50px;
   text-align: center;
   padding:10px;
-  z-index: var(--1_bottom);
   }
 
 .header > h2 {
@@ -526,9 +525,8 @@ margin-top:-40px;
 
 
 .containerButton{
-  position: absolute;
-top:-15px;
   height:100%;
+  float:left;
   width : 400px ;
   height : 200px ;
   display : flex ;
@@ -541,24 +539,24 @@ top:-15px;
 }
 
 
-#table-wrapper {
-  overflow-y: auto;
-  max-height: 600px; /* Adjust this value to control the scroll height */
-}
 
-table {
+.table-container {
+  display: inline-block;
   border: 1px solid green;
   border-collapse: collapse;
-  width: 100%;
-  color:white;
-  padding:10px;
-  margin-top: 30px;
-  margin-left:10px;
+  transform: translate(150px,50px);
+  color:white;;
+  }
+
+.table-row {
+  display: flex;
+  width:600px;
 }
 
-th,
-td {
-  padding: 5px;
+.table-cell {
+  flex: 1;
+  padding: 8px;
   border: 1px solid green;
-  color:white;
+  font-size: 20px;
+  font-weight: bold;
 }

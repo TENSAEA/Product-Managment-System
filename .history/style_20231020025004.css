@@ -541,24 +541,20 @@ top:-15px;
 }
 
 
-#table-wrapper {
-  overflow-y: auto;
-  max-height: 600px; /* Adjust this value to control the scroll height */
-}
-
 table {
+  padding:5px;
+  margin-top:80px;
+  margin-left: 10px;
+  margin-right: -500px;
   border: 1px solid green;
   border-collapse: collapse;
   width: 100%;
-  color:white;
-  padding:10px;
-  margin-top: 30px;
-  margin-left:10px;
 }
 
 th,
 td {
+  color:white;
   padding: 5px;
   border: 1px solid green;
-  color:white;
+  text-align: left;
 }

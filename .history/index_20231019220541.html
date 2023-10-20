@@ -45,37 +45,10 @@
       </div>
       <div class="right">
         <h2 id="demoText">Product List</h2>
-        <div class="containerButton">
-          <a href="#" class="button" id="animatedButton">
-            <div class="plate"></div>
-            <div class="plate"></div>
-            <div class="plate"></div>
-            <div class="plate"></div>
-            <div class="plate"></div>
-            <div class="button__wrapper">
-              <span class="button__text">Show</span>
-            </div>
-            <div class="button__box">
-              <div class="inner inner__top"></div>
-              <div class="inner inner__front"></div>
-              <div class="inner inner__bottom"></div>
-              <div class="inner inner__back"></div>
-              <div class="inner inner__left"></div>
-              <div class="inner inner__right"></div>
-            </div>
-          </a>
-        </div>
-        <div id="table-wrapper">
-          <table id="data-table">
-            <tr>
-              <th align="center">Product Name</th>
-              <th align="center">Description</th>
-              <th align="center">Price</th>
-              <th>Quantity</th>
-              <th>&#10008;</th>
-            </tr>
-          </table>
-        </div>
+        <button id="showProduct" onclick="showProduct">Show Product</button>
+        <ul id="product-list">
+          <!-- Product details will be displayed here -->
+        </ul>
       </div>
     </div>
     <script src="style.js" type="module"></script>

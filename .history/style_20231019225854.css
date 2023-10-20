@@ -1,23 +1,14 @@
 * { box-sizing: border-box; }
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
 
-#addProduct {
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
 
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body {
   font-family: 'Rubik', sans-serif;
 }
 
-
 .container {
   display: flex;
-  height: 100%;
+  height: 100vh;
 }
 
 .left {
@@ -33,7 +24,6 @@ html, body {
 }
 
 .right {
-  height:100%;
   flex: 1;
   background-color: black;
   transition: 1s;
@@ -52,7 +42,6 @@ html, body {
   font-size: 50px;
   text-align: center;
   padding:10px;
-  z-index: var(--1_bottom);
   }
 
 .header > h2 {
@@ -144,6 +133,7 @@ html, body {
 
 .a6 {
   animation-delay: 2.5s;
+  cursor:pointer;
 }
 
 @keyframes move {
@@ -154,6 +144,7 @@ html, body {
   }
 
   100% {
+    opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
@@ -395,7 +386,9 @@ margin-top:-40px;
 .button:hover .button__text{
   color : rgba(255,255,255,1) ;
 }
-
+.button:click {
+opacity:0.4;
+}
 .plate{
   position : absolute ;
   z-index : 10 ;
@@ -526,39 +519,11 @@ margin-top:-40px;
 
 
 .containerButton{
-  position: absolute;
-top:-15px;
-  height:100%;
   width : 400px ;
   height : 200px ;
   display : flex ;
   flex-direction : column ;
   justify-content : center ;
   align-items : center ;
-  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-  border:none;
-  outline:none;
-}
-
-
-#table-wrapper {
-  overflow-y: auto;
-  max-height: 600px; /* Adjust this value to control the scroll height */
-}
-
-table {
-  border: 1px solid green;
-  border-collapse: collapse;
-  width: 100%;
-  color:white;
-  padding:10px;
-  margin-top: 30px;
-  margin-left:10px;
-}
-
-th,
-td {
-  padding: 5px;
-  border: 1px solid green;
-  color:white;
+  background : #222 ;
 }

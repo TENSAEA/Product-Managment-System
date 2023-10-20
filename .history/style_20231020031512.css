@@ -552,7 +552,7 @@ table {
   width: 100%;
   color:white;
   padding:10px;
-  margin-top: 30px;
+  margin-top: 85px;
   margin-left:10px;
 }
 
@@ -560,5 +560,6 @@ th,
 td {
   padding: 5px;
   border: 1px solid green;
+  text-align: left;
   color:white;
 }
