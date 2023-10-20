@@ -564,9 +564,3 @@ td {
   border: 1px solid green;
   color:white;
 }
-
-th:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-}

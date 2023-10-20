@@ -100,6 +100,9 @@ function addProductToTable(productId, product) {
   deleteButton.addEventListener("click", function () {
     // Delete the product from the database
     const exactLocation = remove(ref(database, `products/${productId}`));
+
+    // // Remove the row from the table
+    // dataTable.deleteRow(row.rowIndex);
   });
 
   cell5.appendChild(deleteButton);

@@ -46,7 +46,24 @@ onValue(productInDB, (snapshot) => {
       });
     }
   } else {
-    dataTable.innerHTML = `<h1 align="center">Opps Nothing is Here</h1>`;
+    dataTable.innerHTML = `<tr>
+    <th align="center">Product Name</th>
+    <th align="center">Description</th>
+    <th align="center">Price</th>
+    <th>Quantity</th>
+    <th>
+      <i
+        class="bx bx-lg bxs-trash"
+        style="
+          color: #ff0202;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      ></i>
+    </th>
+  </tr>`;
   }
 });
 
@@ -100,6 +117,9 @@ function addProductToTable(productId, product) {
   deleteButton.addEventListener("click", function () {
     // Delete the product from the database
     const exactLocation = remove(ref(database, `products/${productId}`));
+
+    // Remove the row from the table
+    dataTable.deleteRow(row.rowIndex);
   });
 
   cell5.appendChild(deleteButton);
