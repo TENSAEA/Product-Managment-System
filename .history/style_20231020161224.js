@@ -1,5 +1,4 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-import { set } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
 import {
   getDatabase,
   ref,
@@ -105,6 +104,8 @@ function addProductToTable(productId, product) {
 
   cell5.appendChild(deleteButton);
 
+  // ... rest of your code ...
+
   // Add update button
   const updateButton = document.createElement("i");
   updateButton.className = "bx bx-lg bx-edit bx-tada-hover";
@@ -117,7 +118,6 @@ function addProductToTable(productId, product) {
 
   updateButton.addEventListener("click", function () {
     // Handle update action, e.g., open a form or modal
-    updateForm.classList.remove("hidden-1");
     openUpdateForm(productId, product);
   });
 
@@ -141,62 +141,9 @@ addProductBtn.addEventListener("click", function () {
     );
 
     // Clear input fields after adding a product
-    productName.value = "";
-    description.value = "";
-    price.value = "";
-    quantity.value = "";
+    // productName.value = "";
+    // description.value = "";
+    // price.value = "";
+    // quantity.value = "";
   }
 });
-
-const updateForm = document.getElementById("updateForm");
-const updateProductName = document.getElementById("updateProductName");
-const updateDescription = document.getElementById("updateDescription");
-const updatePrice = document.getElementById("updatePrice");
-const updateQuantity = document.getElementById("updateQuantity");
-const updateProductBtn = document.getElementById("updateProductBtn");
-
-let currentProductId = null; // Store the ID of the product being updated
-
-// Function to open the update form with product data
-function openUpdateForm(productId, product) {
-  currentProductId = productId;
-  updateProductName.value = product.name;
-  updateDescription.value = product.description;
-  updatePrice.value = product.price;
-  updateQuantity.value = product.quantity;
-}
-
-function showAlert(message) {
-  const customAlert = document.getElementById("custom-alert");
-  const alertMessage = document.getElementById("alert-message");
-
-  alertMessage.textContent = message;
-  customAlert.style.display = "block";
-
-  // Automatically hide the alert after 3 seconds (adjust the timeout as needed)
-  setTimeout(function () {
-    customAlert.style.display = "none";
-  }, 3000);
-}
-
-// Function to update the product in the database
-updateProductBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  //remove the class of updateFom hidden
-
-  if (currentProductId) {
-    const updatedProduct = {
-      name: updateProductName.value,
-      description: updateDescription.value,
-      price: updatePrice.value,
-      quantity: updateQuantity.value,
-    };
-
-    const productRef = ref(database, `products/${currentProductId}`);
-    set(productRef, updatedProduct);
-  }
-  showAlert("Successfully Updated");
-  updateForm.classList.add("hidden-1");
-});
-
-// Function to show the custom alert

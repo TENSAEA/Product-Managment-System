@@ -209,15 +209,6 @@ th:first-child {
 
 #updateForm{
   color:white;
-  transform: translate(100px,100px);
-}
-
-#updateForm h2{
-  transform: translate(550px,0);
-}
-
-#updateForm button{
-  margin-left:10px;
 }
 
 #updateProductBtn{
@@ -254,6 +245,7 @@ th:first-child {
 #updateForm label{
   margin-top: 10px;
   padding: 12px 10px;
+  background: linear-gradient(to right, black 0%,#0097ff 100%); 
   border-radius: 3px;
   margin-top: 10px;
   color: #fff;
@@ -261,92 +253,3 @@ th:first-child {
   font-family: 'Rubik', sans-serif;
 }
 
-.hidden-1 {
-  display:none;
-}
-
-#custom-alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #29D885; /* Green background color */
-  color: #fff; /* Text color */
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  display: none; /* Hidden by default */
-  z-index: 999; /* Set z-index to appear on top of other elements */
-}
-
-#alert-message {
-  margin: 0;
-}
-
-
-
-
-@media (max-width:1050px){
-  .right{
-    max-width:100%;
-  }
-
-  #updateForm{
-    display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
-  }
-  #updateForm h2{
-    font-size:20px;
-  }
-  #updateForm label{
-    font-size:10px;
-    padding:0px 2px;
-  }
-  #updateForm input{
-    font-size:10px;
-    padding:5px 2px;
-    width:50%;
-  }
-}
-
-@media (max-width:780px) {
-  .animation{
-    font-size:10px;
-  }
-  .a1{
-    font-size:20px;
-  }
-  #demoText{
-    font-size:20px;
-    text-align:center;
-  }
-    .right{
-    max-width:50%;
-  }
-    #updateForm{
-      display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
-    }
-    #updateForm h2{
-      font-size:20px;
-    }
-    #updateForm label{
-      font-size:10px;
-      padding:5px 2px;
-    }
-    #updateForm input{
-      font-size:10px;
-      padding:5px 2px;
-      width:100px;
-    }
-  }

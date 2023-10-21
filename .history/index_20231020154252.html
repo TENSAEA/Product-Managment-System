@@ -16,8 +16,7 @@
         <div class="header">
           <h2 class="animation a1">Product Management Project</h2>
           <h4 class="animation a2">
-            Add the Below Product Form to Create a Product. Done by @Tensae
-            Aschalew
+            Add the Below Product Form to Create a Product.
           </h4>
         </div>
         <div class="form">
@@ -47,27 +46,54 @@
           <br />
           <button class="animation a6" id="addProduct">Add Product</button>
         </div>
+
+        <div class="section full-height">
+          <input
+            class="modal-btn"
+            type="checkbox"
+            id="modal-btn"
+            name="modal-btn"
+          />
+          <label for="modal-btn"
+            >Open Modal <i class="uil uil-expand-arrows"></i
+          ></label>
+          <div class="modal">
+            <div class="modal-wrap">
+              <img src="https://assets.codepen.io/1462889/sl3.jpg" alt="" />
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="right">
         <h2 id="demoText">Product List</h2>
+        <div class="containerButton">
+          <a href="#" class="button" id="animatedButton">
+            <div class="plate"></div>
+            <div class="plate"></div>
+            <div class="plate"></div>
+            <div class="plate"></div>
+            <div class="plate"></div>
+            <div class="button__wrapper">
+              <span class="button__text">Show</span>
+            </div>
+            <div class="button__box">
+              <div class="inner inner__top"></div>
+              <div class="inner inner__front"></div>
+              <div class="inner inner__bottom"></div>
+              <div class="inner inner__back"></div>
+              <div class="inner inner__left"></div>
+              <div class="inner inner__right"></div>
+            </div>
+          </a>
+        </div>
         <div id="table-wrapper">
           <table id="data-table"></table>
         </div>
-        <form id="updateForm" class="hidden-1">
-          <h2>Update Product</h2>
-          <label for="updateProductName">Product Name:</label>
-          <input type="text" id="updateProductName" required />
-          <label for="updateDescription">Description:</label>
-          <input type="text" id="updateDescription" required />
-          <label for="updatePrice">Price:</label>
-          <input type="number" id="updatePrice" required />
-          <label for="updateQuantity">Quantity:</label>
-          <input type="number" id="updateQuantity" required />
-          <button id="updateProductBtn">Update</button>
-        </form>
-      </div>
-      <div id="custom-alert" class="hidden">
-        <p id="alert-message">Successful</p>
       </div>
     </div>
     <script src="style.js" type="module"></script>

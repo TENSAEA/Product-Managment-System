@@ -117,7 +117,7 @@ function addProductToTable(productId, product) {
 
   updateButton.addEventListener("click", function () {
     // Handle update action, e.g., open a form or modal
-    updateForm.classList.remove("hidden-1");
+    updateForm.classList.remove("hidden");
     openUpdateForm(productId, product);
   });
 
@@ -141,10 +141,10 @@ addProductBtn.addEventListener("click", function () {
     );
 
     // Clear input fields after adding a product
-    productName.value = "";
-    description.value = "";
-    price.value = "";
-    quantity.value = "";
+    // productName.value = "";
+    // description.value = "";
+    // price.value = "";
+    // quantity.value = "";
   }
 });
 
@@ -166,19 +166,6 @@ function openUpdateForm(productId, product) {
   updateQuantity.value = product.quantity;
 }
 
-function showAlert(message) {
-  const customAlert = document.getElementById("custom-alert");
-  const alertMessage = document.getElementById("alert-message");
-
-  alertMessage.textContent = message;
-  customAlert.style.display = "block";
-
-  // Automatically hide the alert after 3 seconds (adjust the timeout as needed)
-  setTimeout(function () {
-    customAlert.style.display = "none";
-  }, 3000);
-}
-
 // Function to update the product in the database
 updateProductBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -194,9 +181,41 @@ updateProductBtn.addEventListener("click", function (e) {
 
     const productRef = ref(database, `products/${currentProductId}`);
     set(productRef, updatedProduct);
-  }
-  showAlert("Successfully Updated");
-  updateForm.classList.add("hidden-1");
-});
+    $(document).ready(function () {
+      $(".succ").on("click", function () {
+        $("#success h1,#success p,#success .succ").css({ display: "none" });
 
-// Function to show the custom alert
+        $("#success").animate(
+          {
+            width: "0",
+          },
+          250,
+          function () {
+            $("#success .icon").animate(
+              {
+                borderRadius: "50%",
+              },
+              250,
+              function () {
+                $("#success .icon").animate(
+                  {
+                    opacity: 0,
+                  },
+                  250
+                );
+              }
+            );
+          }
+        );
+      });
+      $("button").on("click", function () {
+        $("section").css({ width: "400px" });
+        $("section h1,section p,section i").css({ display: "block" });
+        $("section .icon").css({
+          borderRadius: "0",
+          opacity: 1,
+        });
+      });
+    });
+  }
+});

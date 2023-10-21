@@ -284,69 +284,9 @@ th:first-child {
 }
 
 
-
-
-@media (max-width:1050px){
-  .right{
-    max-width:100%;
-  }
-
-  #updateForm{
-    display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
-  }
-  #updateForm h2{
-    font-size:20px;
-  }
-  #updateForm label{
-    font-size:10px;
-    padding:0px 2px;
-  }
-  #updateForm input{
-    font-size:10px;
-    padding:5px 2px;
-    width:50%;
-  }
+@media (max-width: 599px) {
+.right{
+  max-width:70%;
 }
-
-@media (max-width:780px) {
-  .animation{
-    font-size:10px;
-  }
-  .a1{
-    font-size:20px;
-  }
-  #demoText{
-    font-size:20px;
-    text-align:center;
-  }
-    .right{
-    max-width:50%;
-  }
-    #updateForm{
-      display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
-    }
-    #updateForm h2{
-      font-size:20px;
-    }
-    #updateForm label{
-      font-size:10px;
-      padding:5px 2px;
-    }
-    #updateForm input{
-      font-size:10px;
-      padding:5px 2px;
-      width:100px;
-    }
-  }
+  
+}

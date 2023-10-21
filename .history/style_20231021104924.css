@@ -284,7 +284,38 @@ th:first-child {
 }
 
 
-
+@media (max-width:780px) {
+.animation{
+  font-size:10px;
+}
+.a1{
+  font-size:20px;
+}
+#demoText{
+  font-size:20px;
+  text-align:center;
+}
+  .right{
+  max-width:60%;
+}
+  #updateForm{
+    display:flex;
+    flex-direction: column;
+    padding:80px;
+    transform: translate(0,-150px);
+  }
+  #updateForm h2{
+    font-size:20px;
+  }
+  #updateForm label{
+    font-size:10px;
+    padding:5px 2px;
+  }
+  #updateForm input{
+    font-size:10px;
+    padding:5px 2px;
+  }
+}
 
 @media (max-width:1050px){
   .right{
@@ -296,16 +327,13 @@ th:first-child {
     flex-direction: column;
     padding:80px;
     transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
   }
   #updateForm h2{
     font-size:20px;
   }
   #updateForm label{
     font-size:10px;
-    padding:0px 2px;
+    padding:5px 2px;
   }
   #updateForm input{
     font-size:10px;
@@ -313,40 +341,4 @@ th:first-child {
     width:50%;
   }
 }
-
-@media (max-width:780px) {
-  .animation{
-    font-size:10px;
-  }
-  .a1{
-    font-size:20px;
-  }
-  #demoText{
-    font-size:20px;
-    text-align:center;
-  }
-    .right{
-    max-width:50%;
-  }
-    #updateForm{
-      display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
-    }
-    #updateForm h2{
-      font-size:20px;
-    }
-    #updateForm label{
-      font-size:10px;
-      padding:5px 2px;
-    }
-    #updateForm input{
-      font-size:10px;
-      padding:5px 2px;
-      width:100px;
-    }
-  }
+}

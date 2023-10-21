@@ -285,7 +285,6 @@ th:first-child {
 
 
 
-
 @media (max-width:1050px){
   .right{
     max-width:100%;
@@ -314,6 +313,7 @@ th:first-child {
   }
 }
 
+
 @media (max-width:780px) {
   .animation{
     font-size:10px;
@@ -326,16 +326,13 @@ th:first-child {
     text-align:center;
   }
     .right{
-    max-width:50%;
+    max-width:60%;
   }
     #updateForm{
       display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
+      flex-direction: column;
+      padding:80px;
+      transform: translate(0,-150px);
     }
     #updateForm h2{
       font-size:20px;
@@ -347,6 +344,5 @@ th:first-child {
     #updateForm input{
       font-size:10px;
       padding:5px 2px;
-      width:100px;
     }
   }

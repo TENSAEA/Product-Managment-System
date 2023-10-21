@@ -141,10 +141,10 @@ addProductBtn.addEventListener("click", function () {
     );
 
     // Clear input fields after adding a product
-    productName.value = "";
-    description.value = "";
-    price.value = "";
-    quantity.value = "";
+    // productName.value = "";
+    // description.value = "";
+    // price.value = "";
+    // quantity.value = "";
   }
 });
 
@@ -195,8 +195,7 @@ updateProductBtn.addEventListener("click", function (e) {
     const productRef = ref(database, `products/${currentProductId}`);
     set(productRef, updatedProduct);
   }
-  showAlert("Successfully Updated");
-  updateForm.classList.add("hidden-1");
+  alert("Successful");
 });
 
 // Function to show the custom alert

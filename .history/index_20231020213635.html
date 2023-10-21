@@ -16,8 +16,7 @@
         <div class="header">
           <h2 class="animation a1">Product Management Project</h2>
           <h4 class="animation a2">
-            Add the Below Product Form to Create a Product. Done by @Tensae
-            Aschalew
+            Add the Below Product Form to Create a Product.
           </h4>
         </div>
         <div class="form">
@@ -53,7 +52,7 @@
         <div id="table-wrapper">
           <table id="data-table"></table>
         </div>
-        <form id="updateForm" class="hidden-1">
+        <form id="updateForm" class="hidden">
           <h2>Update Product</h2>
           <label for="updateProductName">Product Name:</label>
           <input type="text" id="updateProductName" required />
@@ -65,9 +64,17 @@
           <input type="number" id="updateQuantity" required />
           <button id="updateProductBtn">Update</button>
         </form>
-      </div>
-      <div id="custom-alert" class="hidden">
-        <p id="alert-message">Successful</p>
+
+        <script src="https://use.fontawesome.com/80976cfcfc.js"></script>
+        <section id="success">
+          <div class="icon">
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+          </div>
+          <h1>Successfully submited!</h1>
+          <p>Take a seat and wait your response.</p>
+          <p>It won't take long. We promise!</p>
+          <i class="fa fa-times succ" aria-hidden="true"></i>
+        </section>
       </div>
     </div>
     <script src="style.js" type="module"></script>

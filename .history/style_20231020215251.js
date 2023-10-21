@@ -141,10 +141,10 @@ addProductBtn.addEventListener("click", function () {
     );
 
     // Clear input fields after adding a product
-    productName.value = "";
-    description.value = "";
-    price.value = "";
-    quantity.value = "";
+    // productName.value = "";
+    // description.value = "";
+    // price.value = "";
+    // quantity.value = "";
   }
 });
 
@@ -166,19 +166,6 @@ function openUpdateForm(productId, product) {
   updateQuantity.value = product.quantity;
 }
 
-function showAlert(message) {
-  const customAlert = document.getElementById("custom-alert");
-  const alertMessage = document.getElementById("alert-message");
-
-  alertMessage.textContent = message;
-  customAlert.style.display = "block";
-
-  // Automatically hide the alert after 3 seconds (adjust the timeout as needed)
-  setTimeout(function () {
-    customAlert.style.display = "none";
-  }, 3000);
-}
-
 // Function to update the product in the database
 updateProductBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -195,8 +182,5 @@ updateProductBtn.addEventListener("click", function (e) {
     const productRef = ref(database, `products/${currentProductId}`);
     set(productRef, updatedProduct);
   }
-  showAlert("Successfully Updated");
-  updateForm.classList.add("hidden-1");
+  alert("Successful");
 });
-
-// Function to show the custom alert

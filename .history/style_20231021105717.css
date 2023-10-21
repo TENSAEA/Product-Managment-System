@@ -330,12 +330,9 @@ th:first-child {
   }
     #updateForm{
       display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-140px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
+      flex-direction: column;
+      padding:80px;
+      transform: translate(0,-150px);
     }
     #updateForm h2{
       font-size:20px;

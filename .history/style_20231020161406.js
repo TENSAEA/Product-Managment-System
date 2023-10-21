@@ -1,5 +1,4 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-import { set } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
 import {
   getDatabase,
   ref,
@@ -105,6 +104,8 @@ function addProductToTable(productId, product) {
 
   cell5.appendChild(deleteButton);
 
+  // ... rest of your code ...
+
   // Add update button
   const updateButton = document.createElement("i");
   updateButton.className = "bx bx-lg bx-edit bx-tada-hover";
@@ -117,7 +118,6 @@ function addProductToTable(productId, product) {
 
   updateButton.addEventListener("click", function () {
     // Handle update action, e.g., open a form or modal
-    updateForm.classList.remove("hidden-1");
     openUpdateForm(productId, product);
   });
 
@@ -141,10 +141,10 @@ addProductBtn.addEventListener("click", function () {
     );
 
     // Clear input fields after adding a product
-    productName.value = "";
-    description.value = "";
-    price.value = "";
-    quantity.value = "";
+    // productName.value = "";
+    // description.value = "";
+    // price.value = "";
+    // quantity.value = "";
   }
 });
 
@@ -164,26 +164,11 @@ function openUpdateForm(productId, product) {
   updateDescription.value = product.description;
   updatePrice.value = product.price;
   updateQuantity.value = product.quantity;
-}
-
-function showAlert(message) {
-  const customAlert = document.getElementById("custom-alert");
-  const alertMessage = document.getElementById("alert-message");
-
-  alertMessage.textContent = message;
-  customAlert.style.display = "block";
-
-  // Automatically hide the alert after 3 seconds (adjust the timeout as needed)
-  setTimeout(function () {
-    customAlert.style.display = "none";
-  }, 3000);
+  updateForm.classList.remove("hidden");
 }
 
 // Function to update the product in the database
-updateProductBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  //remove the class of updateFom hidden
-
+updateProductBtn.addEventListener("click", function () {
   if (currentProductId) {
     const updatedProduct = {
       name: updateProductName.value,
@@ -194,9 +179,6 @@ updateProductBtn.addEventListener("click", function (e) {
 
     const productRef = ref(database, `products/${currentProductId}`);
     set(productRef, updatedProduct);
+    updateForm.classList.add("hidden");
   }
-  showAlert("Successfully Updated");
-  updateForm.classList.add("hidden-1");
 });
-
-// Function to show the custom alert

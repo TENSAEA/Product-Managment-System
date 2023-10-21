@@ -196,7 +196,7 @@ updateProductBtn.addEventListener("click", function (e) {
     set(productRef, updatedProduct);
   }
   showAlert("Successfully Updated");
-  updateForm.classList.add("hidden-1");
+  updateForm.classList.remove("hidden-1");
 });
 
 // Function to show the custom alert

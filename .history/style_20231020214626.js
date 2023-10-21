@@ -117,7 +117,7 @@ function addProductToTable(productId, product) {
 
   updateButton.addEventListener("click", function () {
     // Handle update action, e.g., open a form or modal
-    updateForm.classList.remove("hidden-1");
+    updateForm.classList.remove("hidden");
     openUpdateForm(productId, product);
   });
 
@@ -141,10 +141,10 @@ addProductBtn.addEventListener("click", function () {
     );
 
     // Clear input fields after adding a product
-    productName.value = "";
-    description.value = "";
-    price.value = "";
-    quantity.value = "";
+    // productName.value = "";
+    // description.value = "";
+    // price.value = "";
+    // quantity.value = "";
   }
 });
 
@@ -166,23 +166,11 @@ function openUpdateForm(productId, product) {
   updateQuantity.value = product.quantity;
 }
 
-function showAlert(message) {
-  const customAlert = document.getElementById("custom-alert");
-  const alertMessage = document.getElementById("alert-message");
-
-  alertMessage.textContent = message;
-  customAlert.style.display = "block";
-
-  // Automatically hide the alert after 3 seconds (adjust the timeout as needed)
-  setTimeout(function () {
-    customAlert.style.display = "none";
-  }, 3000);
-}
-
+// Function to update the product in the database
 // Function to update the product in the database
 updateProductBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  //remove the class of updateFom hidden
+  // Remove the class of updateForm hidden
 
   if (currentProductId) {
     const updatedProduct = {
@@ -194,9 +182,21 @@ updateProductBtn.addEventListener("click", function (e) {
 
     const productRef = ref(database, `products/${currentProductId}`);
     set(productRef, updatedProduct);
-  }
-  showAlert("Successfully Updated");
-  updateForm.classList.add("hidden-1");
-});
 
-// Function to show the custom alert
+    // Additional code to execute on "Update Product" button click
+    const successSection = document.getElementById("success");
+    const successH1 = successSection.querySelector("h1");
+    const successP = successSection.querySelector("p");
+    const successButton = document.querySelector(".succ");
+
+    successH1.style.display = "none";
+    successP.style.display = "none";
+    successButton.style.display = "none";
+
+    successSection.style.width = "0";
+
+    const successIcon = successSection.querySelector(".icon");
+    successIcon.style.borderRadius = "50%";
+    successIcon.style.opacity = "0";
+  }
+});
