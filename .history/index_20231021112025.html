@@ -51,22 +51,16 @@
       <div class="right">
         <h2 id="demoText">
           Product List
-          <i
-            id="searchIcon"
-            class="bx bx-search-alt-2 bx-rotate-0"
-            style="color: #0d5af3"
-            >Search</i
-          >
+          <div id="searchContainer" style="display: none">
+            <input type="text" id="searchInput" placeholder="Search by name" />
+          </div>
+          <i class="bx bx-search-al2 bx-rotate-90" style="color: #0d5af3"></i>
         </h2>
-
-        <div id="searchContainer" style="display: none">
-          <input type="text" id="searchInput" placeholder="Search by name" />
-        </div>
         <div id="table-wrapper">
           <table id="data-table"></table>
         </div>
         <form id="updateForm" class="hidden-1">
-          <h2 class="hidden-2">Update Product</h2>
+          <h2>Update Product</h2>
           <label for="updateProductName">Product Name:</label>
           <input type="text" id="updateProductName" required />
           <label for="updateDescription">Description:</label>

@@ -311,7 +311,7 @@ th:first-child {
     display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;
@@ -344,7 +344,7 @@ th:first-child {
     display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;
@@ -402,7 +402,7 @@ th:first-child {
       display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;

@@ -311,13 +311,10 @@ th:first-child {
     display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;
-  }
-  .hidden-2{
-    display:none;
   }
   #updateForm h2{
     font-size:20px;
@@ -337,14 +334,12 @@ th:first-child {
   .right{
     max-width:100%;
   }
-  .hidden-2{
-    display:none;
-  }
+
   #updateForm{
     display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;
@@ -377,16 +372,10 @@ th:first-child {
   #demoText{
     font-size: 30px;
   }
-  .hidden-2{
-    display:none;
-  }
 }
 @media (max-width:780px) {
   .animation{
     font-size:10px;
-  }
-  .hidden-2{
-    display:none;
   }
   .a1{
     font-size:20px;
@@ -402,7 +391,7 @@ th:first-child {
       display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;

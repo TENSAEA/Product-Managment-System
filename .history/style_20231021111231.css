@@ -20,7 +20,7 @@ html, body {
 
 .bx-search-alt-2{
   float:right;
-  cursor:pointer;
+  transform: translate(100px,0px);
 }
 .container {
   display: flex;
@@ -54,35 +54,16 @@ html, body {
 }
 #demoText {
   color: #FFFFFF;
-  background: #CE5937;
-  background: -moz-radial-gradient(center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
-  background: -webkit-radial-gradient(center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
-  background: radial-gradient(ellipse at center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
-  text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd;  color: #FFFFFF;
-  font-size: 70px;
-  padding:20px;
+  background: #333333;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+  color: #FFFFFF;
+  background: #333333;
+  font-size: 50px;
+  text-align: center;
+  padding:10px;
   z-index: var(--1_bottom);
   }
-  #searchContainer{
-    margin:10px;
-  }
-#searchInput{
-  padding: 12px 10px;
-  border: 1px solid white;
-  background: linear-gradient(to right, #180000 0%,#0097ff 100%); 
-  border-radius: 3px;
-  margin-top: 5px;
-  color: #fff;
-  letter-spacing: 1px;
-  font-family: 'Rubik', sans-serif;
-  outline-color: white;
-  outline-width: 1px;
-}
-#searchInput::placeholder{
-  color:white;
-  font-weight: bold;
-  opacity: 0.5;
-}
+
 .header > h2 {
   margin: 0;
   color: #4f46a5;
@@ -306,18 +287,21 @@ th:first-child {
 }
 
 
-@media (max-width:1700px){
+
+
+@media (max-width:1050px){
+  .right{
+    max-width:100%;
+  }
+
   #updateForm{
     display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;
-  }
-  .hidden-2{
-    display:none;
   }
   #updateForm h2{
     font-size:20px;
@@ -333,60 +317,9 @@ th:first-child {
   }
 }
 
-@media (max-width:1200px){
-  .right{
-    max-width:100%;
-  }
-  .hidden-2{
-    display:none;
-  }
-  #updateForm{
-    display:flex;
-    flex-direction: column;
-    padding:80px;
-    transform: translate(0,-80px);
-    justify-content: center;
-    align-items:center;
-    margin:10px;
-  }
-  #updateForm h2{
-    font-size:20px;
-  }
-  #updateForm label{
-    font-size:10px;
-    padding:0px 2px;
-  }
-  #updateForm input{
-    font-size:10px;
-    padding:5px 2px;
-    width:50%;
-  }
-  #demoText{
-    font-size: 45px;
-    color: #FFFFFF;
-    background: #CE5937;
-    background: -moz-radial-gradient(center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
-    background: -webkit-radial-gradient(center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
-    background: radial-gradient(ellipse at center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
-    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-    padding:20px;
-    z-index: var(--1_bottom);
-  }
-}
-@media (max-width:990px){
-  #demoText{
-    font-size: 30px;
-  }
-  .hidden-2{
-    display:none;
-  }
-}
 @media (max-width:780px) {
   .animation{
     font-size:10px;
-  }
-  .hidden-2{
-    display:none;
   }
   .a1{
     font-size:20px;
@@ -402,7 +335,7 @@ th:first-child {
       display:flex;
     flex-direction: column;
     padding:80px;
-    transform: translate(0,-80px);
+    transform: translate(0,-140px);
     justify-content: center;
     align-items:center;
     margin:10px;
