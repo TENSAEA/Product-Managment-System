@@ -68,6 +68,9 @@ function addProduct(name, description, price, quantity) {
 
   // Add the unique ID to the new product object
   newProduct.id = productId;
+
+  // Set the new product in Firebase
+  newProductRef.set(newProduct);
 }
 
 // Add Product To Table Function
@@ -127,6 +130,11 @@ const addProductBtn = document.getElementById("addProduct");
 
 // Add Product Button Event Listener
 addProductBtn.addEventListener("click", function () {
+  productName.value = "";
+  description.value = "";
+  price.value = "";
+  quantity.value = "";
+
   // Check if any of the fields is empty
   if (
     !productName.value ||
@@ -146,10 +154,6 @@ addProductBtn.addEventListener("click", function () {
       quantity.value
     );
   }
-  productName.value = "";
-  description.value = "";
-  price.value = "";
-  quantity.value = "";
 });
 
 const updateForm = document.getElementById("updateForm");

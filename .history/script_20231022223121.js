@@ -68,6 +68,9 @@ function addProduct(name, description, price, quantity) {
 
   // Add the unique ID to the new product object
   newProduct.id = productId;
+
+  // Set the new product in Firebase
+  newProductRef.set(newProduct);
 }
 
 // Add Product To Table Function

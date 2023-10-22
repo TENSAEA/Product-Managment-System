@@ -68,6 +68,9 @@ function addProduct(name, description, price, quantity) {
 
   // Add the unique ID to the new product object
   newProduct.id = productId;
+
+  // Set the new product in Firebase
+  newProductRef.set(newProduct);
 }
 
 // Add Product To Table Function
@@ -145,11 +148,12 @@ addProductBtn.addEventListener("click", function () {
       price.value,
       quantity.value
     );
+
+    productName.value = "";
+    description.value = "";
+    price.value = "";
+    quantity.value = "";
   }
-  productName.value = "";
-  description.value = "";
-  price.value = "";
-  quantity.value = "";
 });
 
 const updateForm = document.getElementById("updateForm");
