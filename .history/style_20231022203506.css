@@ -1,0 +1,340 @@
+/* Importing Google font Rubik */
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
+/* General styling applied to the entire document */
+* { 
+  box-sizing: border-box; 
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Styling for the main container */
+.container {
+  display: flex;
+  height: 100%;
+}
+
+/* Styling for the left section of the page */
+.left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
+/* Styling for the right section of the page */
+.right {
+  height:100%;
+  flex: 1;
+  background-color: black;
+  transition: 1s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+}
+
+/* Styling for the add product button */
+#addProduct {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#addProduct:hover{
+  background: linear-gradient(to left, #de48b5 0%,#0097ff 100%);
+}
+
+/* Styling for the animated button */
+#animatedButton{
+  cursor: default;
+}
+
+/* Styling for the demo text */
+#demoText {
+  color: #FFFFFF;
+  background: #CE5937;
+  background: -moz-radial-gradient(center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
+  background: -webkit-radial-gradient(center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
+  background: radial-gradient(ellipse at center, #CE5937 0%, #1C6EA4 19%, #C59237 100%);
+  text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd;  
+  color: #FFFFFF;
+  font-size: 70px;
+  padding:20px;
+  z-index: var(--1_bottom);
+}
+
+/* Styling for the search container */
+#searchContainer{
+  margin:10px;
+}
+
+/* Styling for the search input */
+#searchInput{
+  padding: 12px 10px;
+  border: 1px solid white;
+  background: linear-gradient(to right, #180000 0%,#0097ff 100%); 
+  border-radius: 3px;
+  margin-top: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+  outline-color: white;
+  outline-width: 1px;
+}
+
+#searchInput::placeholder{
+  color:white;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+/* Styling for the header */
+.header > h2 {
+  margin: 0;
+  color: #4f46a5;
+}
+
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0,0,0,.4);
+}
+
+/* Styling for the form */
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: #000;
+  font-size: 14px;
+}
+
+/* Styling for the form fields */
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #0f7ef1;
+}
+
+.form > button {
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Styling for the table wrapper */
+#table-wrapper {
+  overflow-y: auto;
+  max-height: 320px; /* Adjust this value to control the scroll height */
+}
+
+/* Styling for the table */
+table {
+  border: 1px solid green;
+  border-collapse: collapse;
+  width: 100%;
+  color:white;
+  padding:10px;
+  margin-top: 20px;
+  margin-left:10px;
+}
+
+th,
+td {
+  padding: 5px;
+  border: 1px solid green;
+  color:white;
+}
+
+th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+/* Styling for the update form */
+#updateForm{
+  color:white;
+  transform: translate(100px,100px);
+}
+
+#updateForm h2{
+  transform: translate(550px,0);
+}
+
+#updateForm button{
+  margin-left:10px;
+}
+
+/* Styling for the update product button */
+#updateProductBtn{
+  margin-top: 10px;
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+}
+
+#updateProductBtn:hover{
+  background: linear-gradient(to left, #de48b5 0%,#0097ff 100%);
+}
+
+/* Styling for the update form input */
+#updateForm input{
+  margin-top: 10px;
+  padding: 12px 10px;
+  border: 1px solid white;
+  background: linear-gradient(to right, black 0%,#0097ff 100%); 
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+  outline-color: white;
+  outline-width: 1px;
+}
+
+/* Styling for the update form label */
+#updateForm label{
+  margin-top: 10px;
+  padding: 12px 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Styling for the custom alert */
+#custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #29D885; /* Green background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  z-index: 999; /* Set z-index to appear on top of other elements */
+}
+
+#alert-message {
+  margin: 0;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1700px) {
+  #updateForm {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    transform: translate(0, -80px);
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  #updateForm h2 {
+    transform: translate(550px, 0);
+  }
+  #updateForm input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .right {
+    max-width: 100%;
+  }
+  .hidden-2 {
+    display: none;
+  }
+  #updateForm {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    transform: translate(0, -80px);
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  #updateForm h2 {
+    font-size: 20px;
+  }
+  #updateForm label {
+    font-size: 10px;
+    padding: 0px 2px;
+  }
+  #updateForm input {
+    font-size: 10px;
+    padding: 5px 2px;
+    width: 50%;
+  }
+  #demoText {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 990px) {
+  #demoText {
+    font-size: 30px;
+  }
+  .hidden-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .animation {
+    font-size: 10px;
+  }
+  .hidden-2 {
+    display: none;
+  }
+  .a1 {
+    font-size: 20px;
+  }
+  #demoText {
+    font-size: 20px;
+    text-align: center;
+  }
+}

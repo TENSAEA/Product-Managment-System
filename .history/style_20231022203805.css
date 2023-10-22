@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+#addProduct {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#addProduct:hover {
+  background: linear-gradient(to left, #de48b5, #0097ff);
+}
+
+.bx-search-alt-2 {
+  float: right;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  animation: left 1s both 1s;
+}
+
+.right {
+  height: 100%;
+  flex: 1;
+  background-color: black;
+  transition: 1s;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#animatedButton {
+  cursor: default;
+}
+
+#demoText {
+  color: #ffffff;
+  font-size: 70px;
+  padding: 20px;
+  background: radial-gradient(
+    ellipse at center,
+    #ce5937 0%,
+    #1c6ea4 19%,
+    #c59237 100%
+  );
+  text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc,
+    -15px 15px 0px #00bdbd;
+}
+
+#searchContainer {
+  margin: 10px;
+}
+
+#searchInput {
+  padding: 12px 10px;
+  border: 1px solid white;
+  background: linear-gradient(to right, #180000 0%, #0097ff 100%);
+  border-radius: 3px;
+  margin-top: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+  outline-color: white;
+  outline-width: 1px;
+}
+
+#searchInput::placeholder {
+  color: white;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.header > h2 {
+  margin: 0;
+  color: #4f46a5;
+}
+
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form-field {
+  text-align: left;
+  line-height: 1.5em;
+  padding-top: 5px;
+}
+
+.form-field[placeholder] {
+  padding: 10px;
+}
+
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: #000;
+  font-size: 14px;
+}
+
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: "Rubik", sans-serif;
+  outline: 0;
+  transition: 0.2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #0f7ef1;
+}
+
+.form > button {
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+}
+
+.animation {
+  animation-name: move;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.a1 {
+  animation-delay: 2s;
+}
+
+.a2 {
+  animation-delay: 2.1s;
+}
+
+.a3 {
+  animation-delay: 2.2s;
+}
+
+.a4 {
+  animation-delay: 2.3s;
+}
+
+.a5 {
+  animation-delay: 2.4s;
+}
+
+.a6 {
+  animation-delay: 2.5s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+  100% {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+
+#table-wrapper {
+  overflow-y: auto;
+  max-height: 320px;
+}
+
+table {
+  border: 1px solid green;
+  border-collapse: collapse;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+th,
+td {
+  padding: 5px;
+  border: 1px solid green;
+  color: white;
+}
+
+th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+#updateForm {
+  color: white;
+  transform: translate(100px, 100px);
+}
+
+#updateForm h2 {
+  transform: translate(550px, 0);
+}
+
+#updateForm button {
+  margin-left: 10px;
+}
+
+#updateProductBtn {
+  margin-top: 10px;
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+
+#updateProductBtn:hover {
+  background: linear-gradient(to left, #de48b5 0%, #0097ff 100%);
+}
+
+#updateForm input {
+  margin-top: 10px;
+  padding: 12px 10px;
+  border: 1px solid white;
+  background: linear-gradient(to right, black 0%, #0097ff 100%);
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+  outline-color: white;
+  outline-width: 1px;
+}
+
+#updateForm label {
+  margin-top: 10px;
+  padding: 12px 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+}
+
+.hidden-1,
+.hidden-2 {
+  display: none;
+}
+
+#custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #29d885;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+#alert-message {
+  margin: 0;
+}
+
+@media (max-width: 1700px) {
+  #updateForm {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    transform: translate(0, -80px);
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  #updateForm h2 {
+    transform: translate(550px, 0);
+  }
+  #updateForm input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .right {
+    max-width: 100%;
+  }
+  .hidden-2 {
+    display: none;
+  }
+  #updateForm {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    transform: translate(0, -80px);
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  #updateForm h2 {
+    font-size: 20px;
+  }
+  #updateForm label {
+    font-size: 10px;
+    padding: 0px 2px;
+  }
+  #updateForm input {
+    font-size: 10px;
+    padding: 5px 2px;
+    width: 50%;
+  }
+  #demoText {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 990px) {
+  #demoText {
+    font-size: 30px;
+  }
+  .hidden-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .animation {
+    font-size: 10px;
+  }
+  .hidden-2 {
+    display: none;
+  }
+  .a1 {
+    font-size: 20px;
+  }
+  #demoText {
+    font-size: 20px;
+    text-align: center;
+  }
+}

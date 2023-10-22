@@ -12,10 +12,9 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif;
-  user-select: none;
 }
 
-/* Styling for the #addProduct element */
+/* Styling for the #addProduct element (perhaps a button) */
 #addProduct {
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -45,12 +44,7 @@ html, body {
   animation-delay: 1s;
 }
 
-.bx-search-alt-2{
-  float:right;
-  cursor:pointer;
-}
-
-/* Styles for the right column */
+/* Styles for the right column (background) */
 .right {
   height: 100%;
   flex: 1;
@@ -61,12 +55,12 @@ html, body {
   transition: 1s;
 }
 
-/* Styles for the #animatedButton */
+/* Styles for the #animatedButton (might need more context) */
 #animatedButton {
   cursor: default;
 }
 
-/* Styles for the #demoText  */
+/* Styles for the #demoText (text with background) */
 #demoText {
   color: #FFFFFF;
   background: #CE5937;
@@ -183,56 +177,18 @@ html, body {
   animation-delay: 2s;
 }
 
-.a1 {
-  animation-delay: 2s;
-}
-
-.a2 {
-  animation-delay: 2.1s;
-}
-
-.a3 {
-  animation-delay: 2.2s;
-}
-
-.a4 {
-  animation-delay: 2.3s;
-}
-
-.a5 {
-  animation-delay: 2.4s;
-}
-
-.a6 {
-  animation-delay: 2.5s;
-}
-
-@keyframes move {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-40px);
-  }
-
-  100% {
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-
+/* Animation keyframes for 'left' element */
 @keyframes left {
   0% {
     opacity: 0;
     width: 0;
   }
-
   100% {
     opacity: 1;
     padding: 20px 40px;
     width: 440px;
   }
 }
-
 
 /* Styles for a table and scrollable content */
 #table-wrapper {
@@ -459,5 +415,3 @@ th:first-child {
       width:100px;
     }
   }
-
-  /* Done by @Tensae_Aschalew */
