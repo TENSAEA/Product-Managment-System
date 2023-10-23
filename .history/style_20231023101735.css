@@ -126,6 +126,14 @@ html, body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+/* Styles for form fields */
+.form-field {
+  text-align: left;
+  line-height: 1.5em;
+  padding-top: 5px;
+  max-width:80%;
+}
+
 /* Additional styling for form fields with 'placeholder' attribute */
 .form-field[placeholder] {
   padding: 10px;
@@ -153,7 +161,7 @@ html, body {
 
 /* Styles for form input fields */
 .form-field {
-  height: 50px;
+  height: 46px;
   padding: 0 16px;
   border: 2px solid #ddd;
   border-radius: 4px;
@@ -271,7 +279,7 @@ th:first-child {
 /* Styles for an update form and related elements */
 #updateForm {
   color: white;
-  transform: translate(0px, -100px);
+  transform: translate(100px, 100px);
 }
 
 #updateForm h2 {

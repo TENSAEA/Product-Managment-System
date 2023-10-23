@@ -126,6 +126,14 @@ html, body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+/* Styles for form fields */
+.form-field {
+  text-align: left;
+  line-height: 1.5em;
+  padding-top: 5px;
+  max-width:80%;
+}
+
 /* Additional styling for form fields with 'placeholder' attribute */
 .form-field[placeholder] {
   padding: 10px;
@@ -153,7 +161,7 @@ html, body {
 
 /* Styles for form input fields */
 .form-field {
-  height: 50px;
+  height: 46px;
   padding: 0 16px;
   border: 2px solid #ddd;
   border-radius: 4px;
@@ -271,7 +279,7 @@ th:first-child {
 /* Styles for an update form and related elements */
 #updateForm {
   color: white;
-  transform: translate(0px, -100px);
+  transform: translate(100px, 100px);
 }
 
 #updateForm h2 {
@@ -359,6 +367,12 @@ th:first-child {
     align-items:center;
     margin:10px;
   }
+  .form-field {
+    text-align: left;
+    line-height: 1.5em;
+    padding-top: 5px;
+    max-width:80%;
+  }
   .hidden-1 {
     visibility: hidden;
   }
@@ -378,6 +392,12 @@ th:first-child {
     width:50%;
   }}
 @media (max-width:1700px){
+  .form-field {
+    text-align: left;
+    line-height: 1.5em;
+    padding-top: 5px;
+    max-width:80%;
+  }
   #updateForm{
     display:flex;
     flex-direction: column;
@@ -408,6 +428,12 @@ th:first-child {
 }
 
 @media (max-width:1200px){
+  .form-field {
+    text-align: left;
+    line-height: 1.5em;
+    padding-top: 5px;
+    max-width:80%;
+  }
   .right{
     max-width:100%;
   }
@@ -451,6 +477,12 @@ th:first-child {
   }
 }
 @media (max-width:990px){
+  .form-field {
+    text-align: left;
+    line-height: 1.5em;
+    padding-top: 5px;
+    max-width:80%;
+  }
   #demoText{
     font-size: 30px;
   }
@@ -462,6 +494,12 @@ th:first-child {
   }
 }
 @media (max-width:780px) {
+  .form-field {
+    text-align: left;
+    line-height: 1.5em;
+    padding-top: 5px;
+    max-width:80%;
+  }
   .animation{
     font-size:10px;
   }

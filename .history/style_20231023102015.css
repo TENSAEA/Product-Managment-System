@@ -153,7 +153,7 @@ html, body {
 
 /* Styles for form input fields */
 .form-field {
-  height: 50px;
+  height: 46px;
   padding: 0 16px;
   border: 2px solid #ddd;
   border-radius: 4px;
@@ -271,7 +271,7 @@ th:first-child {
 /* Styles for an update form and related elements */
 #updateForm {
   color: white;
-  transform: translate(0px, -100px);
+  transform: translate(100px, 100px);
 }
 
 #updateForm h2 {

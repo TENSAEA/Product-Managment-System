@@ -271,7 +271,7 @@ th:first-child {
 /* Styles for an update form and related elements */
 #updateForm {
   color: white;
-  transform: translate(0px, -100px);
+  transform: translate(0px, 100px);
 }
 
 #updateForm h2 {
